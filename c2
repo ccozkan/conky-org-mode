@@ -1,0 +1,46 @@
+ conky.config = {
+    alignment = 'top_right',
+    background = false,
+    border_width = 1,
+    cpu_avg_samples = 2,
+    default_color = 'black',
+    default_outline_color = 'black',
+    default_shade_color = 'black',
+    double_buffer = true,
+    draw_borders = false,
+    draw_graph_borders = true,
+    draw_outline = false,
+    draw_shades = false,
+    extra_newline = false,
+    font = 'Hack:size=13',
+    gap_x = 80,
+    gap_y = 200,
+    minimum_height = 5,
+    minimum_width = 5,
+    net_avg_samples = 2,
+    no_buffers = true,
+    out_to_console = false,
+    out_to_ncurses = false,
+    out_to_stderr = false,
+    out_to_x = true,
+    own_window = true,
+    own_window_transparent = true,
+    own_window_class = 'Conky',
+    own_window_type = 'desktop',
+    show_graph_range = false,
+    show_graph_scale = false,
+    stippled_borders = 0,
+    update_interval = 2.0,
+    uppercase = false,
+    use_spacer = 'none',
+    use_xft = true,
+}   
+
+conky.text = [[
+${color black}${font hack:bold:size=15}AGENDA
+${color black}${font hack:size=13}${exec cat /home/cc/Aux/agentado/agenda.txt}
+
+${color black}${font Dejavu Sans Mono:bold:size=15}TODOs
+${color black}${font hack:size=13}${exec cat /home/cc/Aux/agentado/todos.txt}
+
+]]
